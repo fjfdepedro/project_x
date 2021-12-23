@@ -59,6 +59,10 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "rspec-rails"
   gem "rubocop-rspec"
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'factory_bot_rails'
+  gem 'shoulda-matchers'
+  gem "json-schema"
 end
 
 group :development do
