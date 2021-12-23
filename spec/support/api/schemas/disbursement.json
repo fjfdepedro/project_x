@@ -1,0 +1,8 @@
+{
+  "id": { "type" : "integer" },
+  "order_id": { "type" : "integer" },
+  "fee_configuration_id": { "type" : "integer" },
+  "processed_at": { "type" : "string", "format": "date-time" },
+  "value": { "type" : "integer" },
+  "status": { "type" : "string"}
+  }
