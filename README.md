@@ -11,13 +11,12 @@
     docker-compose up
     ```
 
-* Database creation
+* Database creation and initialization
 
     docker exec -it {container web id} bash
     ```sh
     rails db:create
     ```
-* Database initialization
     ```sh
     rails db:migrate
     ```
