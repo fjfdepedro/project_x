@@ -4,6 +4,13 @@
 
 * Rails 7.0.0
 
+* Configuration
+    ```sh
+    docker-compose build
+
+    docker-compose up
+    ```
+
 * Database creation
 
     docker exec -it {container web id} bash
