@@ -2,7 +2,11 @@ class Disbursement < ActiveRecord::Base
   belongs_to :order
   belongs_to :fee_configuration
 
-  attr_accessor :order, :fee_configuration
+  validates :processed_at, presence: true
+  validates :value, presence: true
+  validates :status, presence: true
+
+  attr_accessor :order, :fee_configuration, :value, :status
 
   scope :find_by_merchant, (lambda do |merchant_id|
     joins(:merchant).where(id: merchant_id)
