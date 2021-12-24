@@ -27,8 +27,7 @@ RSpec.describe Order, type: :model do
       expect(subject).to_not be_valid
     end
     it 'is not valid without a valid status' do
-      subject.status = 'nostatus'
-      expect(subject).to_not be_valid
+      should_not allow_value('nostatus').for(:status)
     end
   end
 end

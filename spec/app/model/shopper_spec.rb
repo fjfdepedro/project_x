@@ -18,12 +18,10 @@ RSpec.describe Shopper, type: :model do
       expect(subject).to be_valid
     end
     it 'is not valid without a valid email' do
-      subject.email = 'shopper@gggggcom'
-      expect(subject).to_not be_valid
+      should_not allow_value('shopperggggcom').for(:email)
     end
     it 'is not valid without a valid nif' do
-      subject.nif = '444444444G'
-      expect(subject).to_not be_valid
+      should_not allow_value('444444444G').for(:nif)
     end
   end
 end

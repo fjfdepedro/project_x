@@ -25,8 +25,7 @@ RSpec.describe Merchant, type: :model do
       expect(subject).to_not be_valid
     end
     it 'is not valid without a valid email' do
-      subject.email = 'infoflatley-rowe.com'
-      expect(subject).to_not be_valid
+      should_not allow_value('infoflatley-rowe.com').for(:email)
     end
     it 'is not valid without a valid cif' do
       subject.cif = '91111111F'
