@@ -9,5 +9,4 @@ class Order < ActiveRecord::Base
     where('from_date < ? AND to_date > ?', day_week, day_week + 6.days)
   end)
   
-  attr_accessor :amount, :status
 end

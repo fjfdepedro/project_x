@@ -6,8 +6,6 @@ class Disbursement < ActiveRecord::Base
   validates :value, presence: true
   validates :status, presence: true
 
-  attr_accessor :order, :fee_configuration, :value, :status
-
   scope :find_by_merchant, (lambda do |merchant_id|
     joins(:merchant).where(id: merchant_id)
   end)
